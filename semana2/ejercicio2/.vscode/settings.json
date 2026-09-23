@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "/Users/alumno/progra3/programacionIII/**/*.jar"
+        ],
+        "exclude": [
+            "/Users/alumno/progra3/programacionIII/semana2/ejercicio1/bin/es/app.jar",
+            "/Users/alumno/progra3/programacionIII/semana2/ejercicio1/src/es/app.jar",
+            "/Users/alumno/progra3/programacionIII/biblioteca_progiii.jar"
+        ]
+    }
+}
