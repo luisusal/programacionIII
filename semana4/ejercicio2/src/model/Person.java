@@ -24,8 +24,25 @@ public class Person{
         this();
         this.nombre = nombre;
     }
+    
+    public static Person crearDesdeArray(String [] args){
+        if(args==null || args.lenght!=3){
+            System.err.println("El numero de argumentos no es valido");
+            return null;
+        }
 
+        try{
+            String nombre = args[0];
+            float peso = Float.parseFloat(args[1]);
+            int altura = Integer.paseInt(args[2]);
 
+            //Crear y retirnar un obj de tipo persona
+            new Person(nombre, peso, altura);
+        }catch(Exception e){
+            System.err.println("No se han podido convertir los argumentos");
+            return null;
+        }
+    }
     public String getNombre() {
         return this.nombre;
     }
@@ -57,6 +74,7 @@ public class Person{
         this.altura = altura;
     }
 
+    //METODOS
 
    public float calcularIMC(Person person) {
         float alturaEnMetros = altura / 100; // Convertir altura a metros
