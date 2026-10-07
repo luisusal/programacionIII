@@ -19,8 +19,18 @@ public class App {
 
             for(int i=0; i<frutas.lenght, i++)
             {
-                System.out.printf("%10s | %4.2f | %Precio kg con IVA | %4.f | %6.2f | ")
+                System.out.printf("%10s | %4.2f | %Precio kg con IVA | %4.f | %6.2f | ",
+                    frutas[i].getNombre(),
+                    pesos,
+                    frutas[i].precioConIva(),
+                    frutas[i].precio(pesos[i])
+                
+                );
+                importeTotal += frutas[i].precio(pesos[i]);
+
             }
+
+            System.out.println("Importe total:" + importeTotal);
 
 
          }while(es.usal.progiii.tools.Esdia.siOno("¿Quieres atender a un nuevo cliente?"));
