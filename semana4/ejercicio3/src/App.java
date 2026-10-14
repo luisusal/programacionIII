@@ -1,3 +1,4 @@
+
 import model.Fruta;
 import es.usal.progriii.tools.Esdia;
 
@@ -17,11 +18,12 @@ public class App {
                 pesos[i]=Esdia.readFloat("Introduce el peso de " + frutas[i].getNombre());
             }
 
-            for(int i=0; i<frutas.lenght, i++)
+            for(int i=0; i<frutas.length; i++)
             {
                 System.out.printf("%10s | %4.2f | %Precio kg con IVA | %4.f | %6.2f | ",
                     frutas[i].getNombre(),
                     pesos,
+                    
                     frutas[i].precioConIva(),
                     frutas[i].precio(pesos[i])
                 
