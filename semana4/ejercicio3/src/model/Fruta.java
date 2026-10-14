@@ -1,7 +1,7 @@
 package model;
 
 public class Fruta {
-    private final Float IVA= 0.04;
+    private final Float IVA= 0.04f;
 
     private final String nombre;
     private final float precioSinIva;
