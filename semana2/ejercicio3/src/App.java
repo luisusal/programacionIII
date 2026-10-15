@@ -15,6 +15,6 @@ public class App {
         }
 
         float media = suma/num;
-        System.out.println("La medida es " + medida);
+        System.out.println("La media es " + media);
     }
 }
