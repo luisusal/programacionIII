@@ -15,6 +15,6 @@ public class App {
         }
 
         float media = suma/num;
-        System.out.println("La media es " + media); //Se puede hacer con printf para que salga con 2 decimales
+        System.out.println("La media es " + media); //Se puede hacer con printf para que salga con 2 decimaless
     }
 }
