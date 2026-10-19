@@ -1,4 +1,4 @@
-import model.Person;
+ import model.Person;
 public class App {
     public static void main(String[] args) throws Exception {
         Person obj = Person.crearDesdeArray(args);
@@ -10,8 +10,7 @@ public class App {
             obj.getNombre(),
             obj.getPeso(),
             obj.getAltura(),
-            obj.calcularIMC()
-    )
-        
+            obj.calcularIMC(obj)
+        );
     }
 }
