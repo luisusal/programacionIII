@@ -5,6 +5,7 @@ public class Fruta {
 
     private final String nombre;
     private final float precioSinIva;
+    
 
     public Fruta(String nombre, float precioSinIva){
         this.nombre=nombre;
@@ -15,6 +16,10 @@ public class Fruta {
     public String getNombre(){
         return nombre;
 
+    }
+
+    public float getPrecioSinIVA() {
+        return precioSinIva;
     }
     
     public float precioConIva(){
