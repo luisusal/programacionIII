@@ -11,6 +11,11 @@ public class App {
          es.usal.progiii.tools.Esdia.readFloat("Introduce el precio de las manzanas", 0 , 10));
 
          do{
+
+            int cliente = new int;
+            cliente = 1;
+            System.out.println("Cliente      " + cliente);
+
             float[] pesos = new float[2]; //Array auxiliar para pesos;
 
             for(int i=0;i<frutas.length; i++)
@@ -33,7 +38,7 @@ public class App {
             }
             System.out.println("Importe total:" + importeTotal);
             
-
+            cliente = cliente + 1; 
 
          }while(es.usal.progiii.tools.Esdia.siOno("¿Quieres atender a un nuevo cliente?     s/n"));
 
