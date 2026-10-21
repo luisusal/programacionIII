@@ -10,10 +10,11 @@ public class App {
         frutas[1] = new Fruta("Manzanas", 
          es.usal.progiii.tools.Esdia.readFloat("Introduce el precio de las manzanas", 0 , 10));
 
+         int cliente = 1;
+         
          do{
 
-            int cliente = new int;
-            cliente = 1;
+            
             System.out.println("Cliente      " + cliente);
 
             float[] pesos = new float[2]; //Array auxiliar para pesos;
