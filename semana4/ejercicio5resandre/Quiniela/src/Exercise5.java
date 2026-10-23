@@ -1,5 +1,4 @@
 import com.coti.tools.Esdia;
-
 import quiniela.Partido;
 import quiniela.Quiniela;
 
