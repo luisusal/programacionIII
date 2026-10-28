@@ -1,0 +1,7 @@
+## Ejemplo básico de un proyecto MVC (sin herencia ni interfaces)
+
+Este proyecto es un ejemplo básico de un proyecto MVC sin herencia ni interfaces. Se ha creado un proyecto con una estructura MVC básica, donde se ha creado un controlador, una vista y un modelo.
+
+
+![PlantUML code](https://www.plantuml.com/plantuml/png/lLHDRzim3BthL-Ys56lo2uQYtSUj0O9jw6NOWP6vW8Ca1XBjVGJzxqDifhDa9mLwwCM8-1w9nqSojraWIHky4TvRORjb4GwseOHEYACnpaFE5dm0Xz7JDd4EdLjrXBzMTqFqWRA0FHXhhLrQ3NxWA8azD9oi-_-x9xsr7LDZ0sT9aDOOC_p4zuInmqWDBAxcMUqcKNIq1w-CvS20NS8TfFkZk191Ju6YGXjENqbQNt42D_I3t2MIYb1ALcYsYu-OzzXCciWe8qCMKu-kpEDPhmCtw4zchu-F9xE_IAAuinscJ1mtYNS90fmcaHBykQSixthTDtOegRgAUkF7IRaMB-tjloNXdCi3Uk9kcJr2j8x3Fl4MqgVVb0MZ8xYKfnDsqeAdltCgfctoLZ1YFImLkqDvADsg9rNZAkZIXDP0qHwqp24B2Bb7NG-Wg1M-VNz-ohteUhpI6rF6e9MdQngI1ci6-5ffq-RLvBfd3P_Bkck5KvsaqUVjqVltc5RJpJyrMovaxmONYFxFTCUl2fbMcmajneMlYs95GnH9Nhpxhxh32jPx-h9Jqz6ziP_HWoEEcCsChylbJJ6XYnorrumVYjP9Pboqv_GQJNzIyoaLfhbrL2MOMunD6xpv1m00)
+
