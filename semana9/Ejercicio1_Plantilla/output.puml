@@ -1,0 +1,93 @@
+@startuml
+class com.gestorlibros.model.GestorLibrosModel {
+~ ArrayList<Libro> libros
+~ Path pathToXML
+~ Path pathToJSON
+~ Path pathToCSV
+~ Path pathToBinary
++ GestorLibrosModel GestorLibrosModel()
++ void addLibro(Libro)
++ void removeLibro(Libro)
++ void updateLibro(Libro)
++ ArrayList<Libro> getLibros()
++ int exportBooksToCSV()
++ int importBooksFromCSV()
++ int exportBooksToJSON()
++ int importBooksFromJSON()
++ int importBooksFromXML()
++ int exportBooksToXML()
++ int saveStateOfTheApp()
++ int loadStateOfTheApp()
+}
+
+class com.gestorlibros.view.View {
+~ Controller c
++ void startMenu()
+- void importarBooksXML()
+- void importarBooksJSON()
+- void exportarBooksJSON()
+- void exportarBooksCSV()
+- void actualizarLibro(ArrayList<Libro>,int)
+- void deleteBookFromModel(ArrayList<Libro>,int)
+- void addBookToModel()
+- void mostrarLibrosModelo(boolean)
++ void setC(Controller)
++ void showInfoMessage(String)
++ void showErrorMessage(String)
+}
+
+class com.gestorlibros.App {
++ {static} void main(String[])
+}
+
+class com.gestorlibros.controller.Controller {
+~ GestorLibrosModel m
+~ View v
++ Controller Controller(GestorLibrosModel,View)
++ void initApp()
++ ArrayList<Libro> getLibros()
++ void addLibro(Libro)
++ void removeLibro(Libro)
++ void updateLibro(Libro)
++ int exportBooksToCSV()
++ int exportBooksToJSON()
++ int importBooksFromJSON()
++ int importBooksFromCSV()
++ int importBooksFromXML()
++ int exportBooksToXML()
+}
+
+class com.gestorlibros.model.Libro {
+~ String ISBN
+~ String titulo
+~ String autor
+~ String editorial
+~ int anyoPublicacion
+~ int numPaginas
+~ float precio
++ Libro Libro()
++ Libro Libro(String,String,String,String,int,int,float)
++ {static} Libro fromDelimitedString(String,String)
++ String asDelimitedString(String)
++ {static} String tableHeader()
++ String asTableRow()
++ int hashCode()
++ boolean equals(Object)
++ String getISBN()
++ void setISBN(String)
++ String getTitulo()
++ void setTitulo(String)
++ String getAutor()
++ void setAutor(String)
++ String getEditorial()
++ void setEditorial(String)
++ int getAnyoPublicacion()
++ void setAnyoPublicacion(int)
++ int getNumPaginas()
++ void setNumPaginas(int)
++ float getPrecio()
++ void setPrecio(float)
+}
+
+
+@enduml
