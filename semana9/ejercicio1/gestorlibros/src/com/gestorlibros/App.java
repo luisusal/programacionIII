@@ -1,24 +1,24 @@
-package com.gestorlibros;
+package com.gestorlibros; 
 
 import com.gestorlibros.controller.Controller;
 import com.gestorlibros.model.GestorLibrosModel;
 import com.gestorlibros.view.View;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception { // Punto de entrada de la aplicación
         
         // Creamos el MV2C
 
         // Creamos el modelo
-        GestorLibrosModel m = new GestorLibrosModel();
+        GestorLibrosModel m = new GestorLibrosModel(); 
 
-        // Creamos la vista
+        // Creamos la vista 
         View v = new View();
 
         // Creamos el controlador
         Controller  c = new Controller(m, v);
 
-        c.initApp();
+        c.initApp(); // Iniciamos la aplicación
 
     }
 }
