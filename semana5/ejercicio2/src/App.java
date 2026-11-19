@@ -7,7 +7,7 @@ public class App {
         String [] cadenasDeTexto = new String[5];
 
         for(int i=0;i<cadenasDeTexto.length;i++){
-            cadenasDeTexto[i] = Esdia.readString("Introduce una cadena de texto: ");
+            cadenasDeTexto[i] = Esdia.readString("Introduce una cadena de texto: "); //no hace falta el nextLine() porque readString ya lo hace, no hace falta el scanner ni el close() porque readString ya lo hace
         }
         
         Arrays.sort(cadenasDeTexto);
