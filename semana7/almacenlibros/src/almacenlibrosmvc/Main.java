@@ -51,7 +51,7 @@ public class Main {
         
         AlmacenModel modelo = new AlmacenModel();
         AlmacenVista vista = new AlmacenVista();
-        AlmacenControlador controlador = new AlmacenControlador(modelo, vista);
+        AlmacenControlador controlador = new AlmacenControlador(modelo, vista); 
         controlador.init();
         
         // Esta inicialización es muy flexible, ya que permitirá cambiar
