@@ -2,16 +2,11 @@ package semana7.ejercicio2.src.vista;
 
 package vista;
 
-import controlador.CompaniaControlador;
-import java.util.Scanner;
+import com.coti.tools.Esdia; // Importación de la clase Esdia para la lectura de datos desde la consola
+import controller.CompaniaControlador;
 
 public class CompaniaVista {
     private CompaniaControlador controlador;
-    private Scanner sc;
-
-    public CompaniaVista() {
-        this.sc = new Scanner(System.in);
-    }
 
     public void setControlador(CompaniaControlador controlador) {
         this.controlador = controlador;
@@ -26,9 +21,8 @@ public class CompaniaVista {
             System.out.println("3.- Calcular ingresos totales");
             System.out.println("4.- Mostrar resultados");
             System.out.println("q.- Salir");
-            System.out.print("Elige una opción: ");
 
-            opcion = sc.nextLine().trim().toLowerCase();
+            opcion = Esdia.readString("Elige una opción: ").trim().toLowerCase();
 
             switch (opcion) {
                 case "1":
@@ -61,7 +55,11 @@ public class CompaniaVista {
         for (int i = 0; i < numAlmacenes; i++) {
             System.out.println("Almacén " + (i + 1) + ":");
             for (int j = 0; j < numProductos; j++) {
-                ventas[i][j] = leerEnteroNoNegativo("  Unidades vendidas del Producto " + (j + 1) + ": ");
+                ventas[i][j] = Esdia.readInt(
+                        "  Unidades vendidas del Producto " + (j + 1) + ": ",
+                        0,
+                        Integer.MAX_VALUE
+                );
             }
         }
 
@@ -74,7 +72,11 @@ public class CompaniaVista {
 
         System.out.println("\n--- Lectura de tabla de precios ---");
         for (int j = 0; j < numProductos; j++) {
-            precios[j] = leerDoubleNoNegativo("Precio unitario del Producto " + (j + 1) + " (€): ");
+            precios[j] = Esdia.readDouble(
+                    "Precio unitario del Producto " + (j + 1) + " (€): ",
+                    0.0,
+                    Double.MAX_VALUE
+            );
         }
 
         controlador.guardarPrecios(precios);
@@ -104,37 +106,5 @@ public class CompaniaVista {
 
     public void mostrarError(String error) {
         System.out.println("[ERROR] " + error);
-    }
-
-    private int leerEnteroNoNegativo(String prompt) {
-        while (true) {
-            System.out.print(prompt);
-            String entrada = sc.nextLine().trim();
-            try {
-                int valor = Integer.parseInt(entrada);
-                if (valor >= 0) {
-                    return valor;
-                }
-                mostrarError("El número de unidades no puede ser negativo.");
-            } catch (NumberFormatException e) {
-                mostrarError("Introduce un número entero válido.");
-            }
-        }
-    }
-
-    private double leerDoubleNoNegativo(String prompt) {
-        while (true) {
-            System.out.print(prompt);
-            String entrada = sc.nextLine().trim().replace(',', '.');
-            try {
-                double valor = Double.parseDouble(entrada);
-                if (valor >= 0.0) {
-                    return valor;
-                }
-                mostrarError("El precio no puede ser negativo.");
-            } catch (NumberFormatException e) {
-                mostrarError("Introduce un número decimal válido.");
-            }
-        }
     }
 }
